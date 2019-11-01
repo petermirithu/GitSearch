@@ -10,11 +10,12 @@ export class GitsearchComponent implements OnInit {
 
   constructor(public gitHttpService:GitHttpService) { }
 
-  searchGit(searchSome){
-  
-  }
-
   ngOnInit() {
   }
+
+  searchGit(searchSome){
+  this.gitHttpService.searchGit(searchSome)
+  }
+
 
 }

@@ -47,32 +47,35 @@ export class GitHttpService {
     })
     return promise;
   }
-  // getRepos(searchSome){
-  //   interface ApiResponse{
-  //     name:string;
-  //     createdOn:Date;
-  //     description:string;
-  //     html_url:string;
-  //   }
-  //   let searchrepos="https://api.github.com/users/"+searchSome+"?access_token="+environment.apiUrl;
-  //   let promise = new Promise((resolve,reject)=>{
-  //     this.http.get<ApiResponse>(searchrepos).toPromise().then(
-  //       (gitreposresults)=>{
-  //         this.repositories =[];
+  getRepos(searchSome){
+    interface ApiResponse{
+      name:string;
+      createdOn:Date;
+      description:string;
+      html_url:string;
+    }
+    let searchrepos="https://api.github.com/users/"+searchSome+"?access_token="+environment.apiUrl;
+    let promise = new Promise((resolve,reject)=>{
+      this.http.get<ApiResponse[]>(searchrepos).toPromise().then(
+        (gitreposresults)=>{
+          this.repositories =[];
 
-  //         for (let i =0;i < gitreposresults.length;i++){
-  //           let repository =new Repository(gitreposresults[i].name,gitreposresults[i].createdOn,gitreposresults[i].description,gitreposresults[i].html_url);
-  //           //pushing new repo results in repository property
-  //           this.repositories.push(repository);
-  //         }
-  //         resolve()
-  //       },
-  //       (error)=>{
-  //         reject();
-  //       }
-  //     );
-  //   });
-  //   return promise;
-  // }
+
+          // for (let i =0;i < gitreposresults.length;i++){
+            gitreposresults.forEach(myfunc);
+            function myfunc(index){
+            let repository =new Repository(gitreposresults[index].name,gitreposresults[index].createdOn,gitreposresults[index].description,gitreposresults[index].html_url);
+            //pushing new repo results in repository property
+            this.repositories.push(repository);
+          }
+          resolve()
+        },
+        (error)=>{
+          reject();
+        }
+      );
+    });
+    return promise;
+  }
   
 }

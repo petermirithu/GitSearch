@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import {GitHttpService} from "../gitHttpService/git-http.service";
 import{User} from '../user';
+import {Repository} from '../repository';
+
 
 @Component({
   selector: 'app-gitsearch',
@@ -10,6 +12,7 @@ import{User} from '../user';
 export class GitsearchComponent implements OnInit {
 
   gitUsers: User;
+  gitRepos:Repository[]=[];
 
   constructor(public gitHttpService:GitHttpService) { }
 
@@ -27,6 +30,8 @@ export class GitsearchComponent implements OnInit {
     }
   );
   }
+
+  
 
 
 }

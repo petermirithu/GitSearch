@@ -2,5 +2,5 @@
 <form class="form-inline">
 <label for="search">Search here</label>
   <input style="margin:20px" type="text" class="form-control" id="search" placeHolder="Search" name="searchSome" [(ngModel)]="searchSome">
-  <button type="submit" class="btn btn-danger" (click)="search()">Search</button>
+  <button type="submit" class="btn btn-danger" (click)="search()" (click)="reposSearch()">Search</button>
 </form>

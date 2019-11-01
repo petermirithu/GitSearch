@@ -11,6 +11,7 @@ export class GitsearchComponent implements OnInit {
   constructor(public gitHttpService:GitHttpService) { }
 
   ngOnInit() {
+    this.searchGit("petermirithu")
   }
 
   searchGit(searchSome){

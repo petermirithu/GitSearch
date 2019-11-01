@@ -7,7 +7,7 @@ import { resolve, reject } from 'q';
   providedIn: 'root'
 })
 export class GitHttpService {
-
+  
   constructor(private http:HttpClient) { }
   
 //helps in searching for a user name only.

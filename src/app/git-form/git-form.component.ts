@@ -12,6 +12,7 @@ export class GitFormComponent implements OnInit {
   @Output() issearch= new EventEmitter<any>()
 
   search(){
+    console.log(this.searchSome)
     this.issearch.emit(this.searchSome);
   }
   constructor() { }

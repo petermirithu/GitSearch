@@ -1,12 +1,14 @@
 <h1>Git Search</h1>
 
 <app-git-form (issearch)="searchGit($event)"></app-git-form>
-<div *ngIf="">
-        <div class="card-columns">
-            <div *ngFor="">
-                <div class="card">
-                    <img src="" class="card-img">
-                </div>
-            </div>
-        </div>
-    </div>
+<div class="card">
+  <div class="card-body">
+    <h5 class="card-title"> User Name: {{gitUsers.login}}</h5>
+    <img style="width:20%;height:20%"class="card-img-top product-image" src="{{gitUsers.avatar_url}}" alt="User's avatar">
+    <p class="card-text">Bio: {{gitUsers.bio}}</p>
+    <p class="card-text">Location: {{gitUsers.location}}</p>
+    <p class="card-text">Repository Numbers: {{gitUsers.public_repos}}</p>
+    <p class="card-text">Followers: {{gitUsers.followers}}</p>
+    <p class="card-text">Account created on: {{gitUsers.created_at|date|uppercase}}</p>
+  </div>
+</div>

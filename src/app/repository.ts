@@ -1,5 +1,5 @@
 export class Repository {
-  constructor (){
+  constructor (public repoName:string, public description:string,public html_url:string){
     
   }
 }

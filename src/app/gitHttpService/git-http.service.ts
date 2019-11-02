@@ -52,6 +52,9 @@ export class GitHttpService {
       name:string;      
       html_url:string;
       description:string;
+      created_at:Date;
+      updated_at:Date;
+      pushed_at:Date;
     }
 
     let searchrepos="https://api.github.com/users/"+searchSome+"/repos?access_token="+environment.apiUrl;
@@ -62,7 +65,7 @@ export class GitHttpService {
           this.repositories =[];
 
            for (let index =0;index < gitreposresults.length;index++){
-            let repository =new Repository(gitreposresults[index].name,gitreposresults[index].html_url,gitreposresults[index].description);
+            let repository =new Repository(gitreposresults[index].name,gitreposresults[index].html_url,gitreposresults[index].description,gitreposresults[index].created_at,gitreposresults[index].updated_at,gitreposresults[index].updated_at);
             //pushing new repo results in repository property
             this.repositories.push(repository);            
           }

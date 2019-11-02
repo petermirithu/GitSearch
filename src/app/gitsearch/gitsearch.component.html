@@ -18,8 +18,12 @@
   <div *ngIf='repositories'>
     <div *ngFor='let repository of repositories'>
 
-      <p>Repo Name:{{repository.name}}</p>
-      <p>Description:={{repository.description}}</p>
+      <p>Repo Name: {{repository.name}}</p>
+      <p>Git hub Url:  {{repository.html_url}}</p>      
+      <p>Description: {{repository.description}}</p>
+      <p>Created on: {{repository.created_at|date|uppercase}}</p>
+      <p>Updated On: {{repository.updated_at|date|uppercase}}</p>
+      <p>Pushed On: {{repository.pushed_at|date|uppercase}}</p>
 
     </div>
   </div>

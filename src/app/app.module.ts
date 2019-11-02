@@ -7,12 +7,16 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GitsearchComponent } from './gitsearch/gitsearch.component';
 import { GitFormComponent } from './git-form/git-form.component';
+import { GitHomeComponent } from './git-home/git-home.component';
+import { ReposHereComponent } from './repos-here/repos-here.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     GitsearchComponent,
-    GitFormComponent
+    GitFormComponent,
+    GitHomeComponent,
+    ReposHereComponent
   ],
   imports: [
     BrowserModule,

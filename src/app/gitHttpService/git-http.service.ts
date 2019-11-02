@@ -39,7 +39,7 @@ export class GitHttpService {
 
           resolve()
         },(error)=>{
-          console.log(error)
+          alert("Cannot be found")
           reject()        
         }
       )

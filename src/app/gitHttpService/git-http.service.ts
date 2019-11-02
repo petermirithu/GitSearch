@@ -3,8 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import {environment} from '../../environments/environment'
 import {User} from '../user';
 import {Repository} from '../repository';
-import { resolve } from 'path';
-import { reject } from 'q';
+
 
 @Injectable({
   providedIn: 'root'
@@ -47,26 +46,25 @@ export class GitHttpService {
     })
     return promise;
   }
+
   getRepos(searchSome){
     interface ApiResponse{
-      name:string;
-      createdOn:Date;
-      description:string;
+      name:string;      
       html_url:string;
+      description:string;
     }
-    let searchrepos="https://api.github.com/users/"+searchSome+"?access_token="+environment.apiUrl;
+
+    let searchrepos="https://api.github.com/users/"+searchSome+"/repos?access_token="+environment.apiUrl;
     let promise = new Promise((resolve,reject)=>{
       this.http.get<ApiResponse[]>(searchrepos).toPromise().then(
         (gitreposresults)=>{
+
           this.repositories =[];
 
-
-          // for (let i =0;i < gitreposresults.length;i++){
-            gitreposresults.forEach(myfunc);
-            function myfunc(index){
-            let repository =new Repository(gitreposresults[index].name,gitreposresults[index].createdOn,gitreposresults[index].description,gitreposresults[index].html_url);
+           for (let index =0;index < gitreposresults.length;index++){
+            let repository =new Repository(gitreposresults[index].name,gitreposresults[index].html_url,gitreposresults[index].description);
             //pushing new repo results in repository property
-            this.repositories.push(repository);
+            this.repositories.push(repository);            
           }
           resolve()
         },

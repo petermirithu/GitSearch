@@ -1,6 +1,6 @@
 <h1>Git Search</h1>
 
-<app-git-form (issearch)="searchGit($event)"></app-git-form>
+<app-git-form (issearch)="searchGit($event)" (isrepossearch)="repoSearch($event)"></app-git-form>
 <div class="card">
   <div class="card-body">
     <img style="width:20%;height:20%"class="card-img-top product-image" src="{{gitUsers.avatar_url}}" alt="User's avatar">
@@ -12,3 +12,14 @@
     <p class="card-text">Account created on: {{gitUsers.created_at|date|uppercase}}</p>
   </div>
 </div>
+
+  <h2>Git Repositories</h2>
+
+  <div *ngIf='repositories'>
+    <div *ngFor='let repository of repositories'>
+
+      <p>Repo Name:{{repository.name}}</p>
+      <p>Description:={{repository.description}}</p>
+
+    </div>
+  </div>

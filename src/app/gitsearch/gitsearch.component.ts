@@ -12,14 +12,15 @@ import {Repository} from '../repository';
 export class GitsearchComponent implements OnInit {
 
   gitUsers: User;
-  gitRepos:Repository[]=[];
+  repositories:Repository[]=[];
 
   constructor(public gitHttpService:GitHttpService) { }
 
   ngOnInit() {
     this.searchGit("petermirithu")
+    this.repoSearch("petermirithu")
   }
-
+  //searching for users
   searchGit(searchSome){
   this.gitHttpService.searchGit(searchSome).then(
     (success)=>{
@@ -31,7 +32,19 @@ export class GitsearchComponent implements OnInit {
   );
   }
 
+ //searching for repositories
+  repoSearch(searchSome){
+    this.gitHttpService.getRepos(searchSome).then(
+      (success)=>{      
+        this.repositories=this.gitHttpService.repositories
+        console.log(this.repositories)
+        
+      },
+      (error)=>{
+        console.log(error)
+      }
+    );
+  }
+
   
-
-
 }

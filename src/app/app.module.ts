@@ -12,6 +12,7 @@ import { GitHomeComponent } from './git-home/git-home.component';
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { HoverDirective } from './hover.directive';
+import { DateCountPipe } from './date-count.pipe';
 
 @NgModule({
   declarations: [
@@ -21,7 +22,8 @@ import { HoverDirective } from './hover.directive';
     GitHomeComponent,    
     NavbarComponent,
     NotFoundComponent,
-    HoverDirective
+    HoverDirective,
+    DateCountPipe
   ],
   imports: [
     BrowserModule,

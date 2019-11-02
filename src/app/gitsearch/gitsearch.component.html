@@ -15,6 +15,7 @@
           <p class="card-text">Repository Numbers: {{gitUsers.public_repos}}</p>
           <p class="card-text">Followers: {{gitUsers.followers}}</p>
           <p class="card-text">Account created on: {{gitUsers.created_at|date|uppercase}}</p>  
+          <p class="card-text">{{gitUsers.created_at|dateCount}} ago</p>
         </div>
       </div>
     </div>

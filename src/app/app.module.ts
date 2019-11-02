@@ -9,6 +9,7 @@ import { GitsearchComponent } from './gitsearch/gitsearch.component';
 import { GitFormComponent } from './git-form/git-form.component';
 import { GitHomeComponent } from './git-home/git-home.component';
 import { ReposHereComponent } from './repos-here/repos-here.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { ReposHereComponent } from './repos-here/repos-here.component';
     GitsearchComponent,
     GitFormComponent,
     GitHomeComponent,
-    ReposHereComponent
+    ReposHereComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

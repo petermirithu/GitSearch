@@ -39,7 +39,7 @@ export class GitHttpService {
 
           resolve()
         },(error)=>{
-          alert("Cannot be found")
+          alert("User Name Cannot be found")
           reject()        
         }
       )
@@ -72,6 +72,7 @@ export class GitHttpService {
           resolve()
         },
         (error)=>{
+          alert("Repositories Cannot be found")
           reject();
         }
       );

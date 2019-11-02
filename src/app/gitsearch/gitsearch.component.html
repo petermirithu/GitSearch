@@ -1,52 +1,55 @@
-<div class="container-fluid">
-  <h1>Git Search</h1>
+<div class="con">
+  <div class="container-fluid">
+    <h1>Git Search</h1>
 
-  <app-git-form (issearch)="searchGit($event)" (isrepossearch)="repoSearch($event)"></app-git-form>
-  <div class="card">
-    <div class="card-body">
-      <div class="row">
-        <div class="col-md-6">
-          <img style="width:50%;height:80%"class="card-img-top product-image" src="{{gitUsers.avatar_url}}" alt="User's avatar">
-          <h5 class="card-title" style="color:gold"> Github User Name: {{gitUsers.login}}</h5>
-        </div>
-        <div class="col-md-6">
-          <p class="card-text">Bio: {{gitUsers.bio}}</p>
-          <p class="card-text">Location: {{gitUsers.location}}</p>
-          <p class="card-text">Repository Numbers: {{gitUsers.public_repos}}</p>
-          <p class="card-text">Followers: {{gitUsers.followers}}</p>
-          <p class="card-text">Account created on: {{gitUsers.created_at|date|uppercase}}</p>  
-          <p class="card-text">{{gitUsers.created_at|dateCount}} ago</p>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <h2>Git Repositories</h2>
-  
-    <div *ngIf='repositories'>
-    <div class="card-columns">
-      <div appHover *ngFor='let repository of repositories'>
-        <div  class="card bg-light mb-3" style="">
-        <div class="card-header"style="color:gold">{{repository.name}}</div>  
-          <div class="row">
-            <div class="col-md-6">
-              <div class="card-body">
-                <h5 class="card-title">Description</h5>
-                <p>{{repository.description}}</p>
-                <a href="{{repository.html_url}}" target="_blank" class="btn btn-outline-success btn-sm">View Site on
-                    github</a>
-                
-              </div>
-            </div>         
-            <div class="col-md-6" >
-              <p>Created on: {{repository.created_at|date|uppercase}}</p>
-              <p>Updated On: {{repository.updated_at|date|uppercase}}</p>
-              <p>Pushed On: {{repository.pushed_at|date|uppercase}}</p>
-            </div>
+    <app-git-form (issearch)="searchGit($event)" (isrepossearch)="repoSearch($event)"></app-git-form>
+    <div class="card text-white bg-transparent mb-3">
+      <div class="card-body">
+        <div class="row">
+          <div class="col-md-6">
+            <img style="width:50%;height:80%"class="card-img-top product-image" src="{{gitUsers.avatar_url}}" alt="User's avatar">
+            <h5 class="card-title" style="color:black"><b> Github User Name: {{gitUsers.login}}</b></h5>
+          </div>
+          <div class="col-md-6">
+            <p class="card-text" style="color:white;background-color:black"><b>Bio: {{gitUsers.bio}}</b></p>
+            <p class="card-text" style="color:white;background-color:black"><b>Location: {{gitUsers.location}}</b></p>
+            <p class="card-text" style="color:white;background-color:black"><b>Repository Numbers: {{gitUsers.public_repos}}</b></p>
+            <p class="card-text" style="color:white;background-color:black"><b>Followers: {{gitUsers.followers}}</b></p>
+            <p class="card-text" style="color:white;background-color:black"><b>Account created on: {{gitUsers.created_at|date|uppercase}}</b></p>  
+            <p class="card-text" style="color:white;background-color:black"><b>{{gitUsers.created_at|dateCount}} ago</b></p>
           </div>
         </div>
       </div>
     </div>
-    </div>
 
-</div>
+    <h2>Git Repositories</h2>
+    
+      <div *ngIf='repositories'>
+      <div class="card-columns">
+      
+        <div appHover *ngFor='let repository of repositories'>
+          <div  class="card text bg-dark mb-3" style="">
+          <div class="card-header"style="color:gold">{{repository.name}}</div>  
+            <div class="row">
+              <div class="col-md-6">
+                <div class="card-body">
+                  <h5 class="card-title">Description</h5>
+                  <p>{{repository.description}}</p>
+                  <a href="{{repository.html_url}}" target="_blank" class="btn btn-outline-success btn-sm">View Site on
+                      github</a>
+                  
+                </div>
+              </div>         
+              <div class="col-md-6" >
+                <p>Created on: {{repository.created_at|date|uppercase}}</p>
+                <p>Updated On: {{repository.updated_at|date|uppercase}}</p>
+                <p>Pushed On: {{repository.pushed_at|date|uppercase}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+
+  </div>
+</div>  

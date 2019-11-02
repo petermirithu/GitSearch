@@ -1,28 +1,33 @@
-# GitSearch
+# GIT_SEARCH.
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9.
 
-## Development server
+## Author: 
+  * Peter Mirithu 
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+#### Authors' information
+*Peter Mirithu*
+    Email: pyra_m.k@yahoo.com <br>
+    Address: 1394 <br>
+    Software Developer.<br>
+    Telephone N.O: 0790476167          
+## Description
+ This is an Angular web application that gives a user a chance to search for any user name on git hub and get the data and repositories belonging to that user name.
 
-## Code scaffolding
+## Setup Requirements
+* A digital device with internet connectivity.
+* A digital device with colored screen.
+* Wifi or Bundles.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Technologies Used
+ This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.3.9. and Bootstrap with css stylesheet.
 
-## Build
+ ## Support and contact details
+ Incase of a problem, issue or need more clarification, feel free to send an email @<br> {pyra_m.k@yahoo.com}<br>
+ Contact Pyra at : 0790476167
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-# GitSearch
+ ### License
+* This project is licensed by [MIT License] (LICENSE).
+  Copyright (c) 2019 
+  
+# GIT_SEARCH.

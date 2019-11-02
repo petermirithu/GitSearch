@@ -1,6 +1,11 @@
 <h2>Search</h2>
 <form class="form-inline">
 <label for="search">Search here</label>
-  <input style="margin:20px" type="text" class="form-control" id="search" placeHolder="Search" name="searchSome" [(ngModel)]="searchSome">
-  <button type="submit" class="btn btn-danger" (click)="search()" (click)="reposSearch()">Search</button>
+  <input style="margin:20px"  type="text" required class="form-control" id="search" placeHolder="Enter Username" name="searchSome"
+   [(ngModel)]="searchSome" name="term" #term='ngModel' ng-required="true">
+
+   <div [hidden]="term.valid || term.pristine" class="alert alert-danger">
+    <p>User-Name is Required</p>
+  </div>
+  <button type="reset" class="btn btn-danger" (click)="search()" (click)="reposSearch()">Search</button>
 </form>

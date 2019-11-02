@@ -1,0 +1,18 @@
+.con{
+  background-image: url("https://images.unsplash.com/photo-1491947153227-33d59da6c448?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");;
+  background-size:cover;   
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+  background-position: 50% 50%;
+  background-attachment: fixed;  
+}
+.card-columns{
+  background-image: url("https://images.unsplash.com/photo-1475257026007-0753d5429e10?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=800&q=60");;
+  background-size:cover;   
+  background-repeat: no-repeat;
+  width: 100%;  
+  background-position: 50% 50%;
+  background-attachment: fixed;  
+  color: black;
+}

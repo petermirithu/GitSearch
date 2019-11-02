@@ -1,6 +1,6 @@
 <div class="con">
   <div class="container-fluid">
-    <h1>Git Search</h1>
+    <h1 class="git">Git_Search</h1>
 
     <app-git-form (issearch)="searchGit($event)" (isrepossearch)="repoSearch($event)"></app-git-form>
     <div class="card text-white bg-transparent mb-3">
@@ -16,7 +16,7 @@
             <p class="card-text" style="color:white;background-color:black"><b>Repository Numbers: {{gitUsers.public_repos}}</b></p>
             <p class="card-text" style="color:white;background-color:black"><b>Followers: {{gitUsers.followers}}</b></p>
             <p class="card-text" style="color:white;background-color:black"><b>Account created on: {{gitUsers.created_at|date|uppercase}}</b></p>  
-            <p class="card-text" style="color:white;background-color:black"><b>{{gitUsers.created_at|dateCount}} ago</b></p>
+            <p class="card-text" style="color:white;background-color:black"><b>Created {{gitUsers.created_at|date|dateCount}} days ago</b></p>
           </div>
         </div>
       </div>

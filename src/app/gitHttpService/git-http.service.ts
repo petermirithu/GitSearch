@@ -46,7 +46,7 @@ export class GitHttpService {
     })
     return promise;
   }
-
+//function receiving event and getting data from the url
   getRepos(searchSome){
     interface ApiResponse{
       name:string;      

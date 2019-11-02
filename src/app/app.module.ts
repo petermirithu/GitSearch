@@ -8,7 +8,7 @@ import { AppComponent } from './app.component';
 import { GitsearchComponent } from './gitsearch/gitsearch.component';
 import { GitFormComponent } from './git-form/git-form.component';
 import { GitHomeComponent } from './git-home/git-home.component';
-import { ReposHereComponent } from './repos-here/repos-here.component';
+
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 
@@ -17,8 +17,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
     AppComponent,
     GitsearchComponent,
     GitFormComponent,
-    GitHomeComponent,
-    ReposHereComponent,
+    GitHomeComponent,    
     NavbarComponent,
     NotFoundComponent
   ],

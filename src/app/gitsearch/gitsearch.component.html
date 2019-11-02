@@ -24,8 +24,8 @@
   
     <div *ngIf='repositories'>
     <div class="card-columns">
-      <div *ngFor='let repository of repositories'>
-        <div class="card bg-light mb-3" style="">
+      <div appHover *ngFor='let repository of repositories'>
+        <div  class="card bg-light mb-3" style="">
         <div class="card-header"style="color:gold">{{repository.name}}</div>  
           <div class="row">
             <div class="col-md-6">

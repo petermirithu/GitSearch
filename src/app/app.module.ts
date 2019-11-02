@@ -11,6 +11,7 @@ import { GitHomeComponent } from './git-home/git-home.component';
 
 import { NavbarComponent } from './navbar/navbar.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { HoverDirective } from './hover.directive';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { NotFoundComponent } from './not-found/not-found.component';
     GitFormComponent,
     GitHomeComponent,    
     NavbarComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    HoverDirective
   ],
   imports: [
     BrowserModule,

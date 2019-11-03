@@ -16,7 +16,8 @@ export class GitHttpService {
   constructor(private http:HttpClient) { 
     this.user = new User("","","",0,new Date(),0,"");
   }
-  
+
+  apikey=environment.apiUrl
   
 //helps in searching for a user name only.
   searchGit(searchSome:string){
@@ -30,7 +31,7 @@ export class GitHttpService {
       bio:string;
     }
     //link with input as searchSome
-    let searchUser="https://api.github.com/users/"+searchSome+"?access_token="+environment.apiUrl;
+    let searchUser="https://api.github.com/users/"+searchSome+"?access_token="+this.apikey;
     //promise
     let promise = new Promise((resolve, reject)=>{
       this.http.get<ApiResponse>(searchUser).toPromise().then(

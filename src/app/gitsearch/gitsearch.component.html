@@ -8,7 +8,7 @@
         <div class="row">
           <div class="col-md-6">
             <img style="width:50%;height:80%"class="card-img-top product-image" src="{{gitUsers.avatar_url}}" alt="User's avatar">
-            <h5 class="card-title" style="color:black"><b> Github User Name: {{gitUsers.login}}</b></h5>
+            <a class="btn btn-outline-danger btn-sm" ><h5 class="card-title" style="color:black"><b> Github User Name: {{gitUsers.login}}</b></h5></a>
           </div>
           <div class="col-md-6">
             <p class="card-text" style="color:white;background-color:black"><b>Bio: {{gitUsers.bio}}</b></p>
@@ -28,14 +28,14 @@
       <div class="card-columns">
       
         <div appHover *ngFor='let repository of repositories'>
-          <div  class="card text bg-dark mb-3" style="">
+          <div  class="card text bg-dark mb-3">
           <div class="card-header"style="color:gold">{{repository.name}}</div>  
             <div class="row">
               <div class="col-md-6">
                 <div class="card-body">
                   <h5 class="card-title">Description</h5>
                   <p>{{repository.description}}</p>
-                  <a href="{{repository.html_url}}" target="_blank" class="btn btn-outline-success btn-sm">View Site on
+                  <a href="{{repository.html_url}}" target="_blank" class="btn btn-outline-success btn-sm">View Repo Site on
                       github</a>
                   
                 </div>

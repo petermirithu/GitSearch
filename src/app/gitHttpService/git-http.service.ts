@@ -9,7 +9,7 @@ import {Repository} from '../repository';
   providedIn: 'root'
 })
 export class GitHttpService {
-  apiKey2:"2ea98b39942cfdc3d1f2b02274c3a691914fd113"
+  
   user:User;
   repositories:Repository[]=[];
 
@@ -32,7 +32,7 @@ export class GitHttpService {
     }
     //link with input as searchSome
     
-    let searchUser="https://api.github.com/users/"+searchSome+"?access_token="+"2ea98b39942cfdc3d1f2b02274c3a691914fd113";
+    let searchUser="https://api.github.com/users/"+searchSome+"?access_token="+this.apikey;
     //promise
     let promise = new Promise((resolve, reject)=>{
       this.http.get<ApiResponse>(searchUser).toPromise().then(
@@ -59,7 +59,7 @@ export class GitHttpService {
       pushed_at:Date;
     }
 
-    let searchrepos="https://api.github.com/users/"+searchSome+"/repos?access_token="+environment.apiUrl;
+    let searchrepos="https://api.github.com/users/"+searchSome+"/repos?access_token="+this.apikey;
     let promise = new Promise((resolve,reject)=>{
       this.http.get<ApiResponse[]>(searchrepos).toPromise().then(
         (gitreposresults)=>{

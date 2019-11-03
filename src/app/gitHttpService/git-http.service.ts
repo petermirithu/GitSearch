@@ -9,7 +9,7 @@ import {Repository} from '../repository';
   providedIn: 'root'
 })
 export class GitHttpService {
-
+  apiKey2:"2ea98b39942cfdc3d1f2b02274c3a691914fd113"
   user:User;
   repositories:Repository[]=[];
 
@@ -31,7 +31,8 @@ export class GitHttpService {
       bio:string;
     }
     //link with input as searchSome
-    let searchUser="https://api.github.com/users/"+searchSome+"?access_token="+this.apikey;
+    
+    let searchUser="https://api.github.com/users/"+searchSome+"?access_token="+"2ea98b39942cfdc3d1f2b02274c3a691914fd113";
     //promise
     let promise = new Promise((resolve, reject)=>{
       this.http.get<ApiResponse>(searchUser).toPromise().then(
